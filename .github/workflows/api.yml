@@ -3,12 +3,6 @@ name: API
 on:
   push:
     branches: [main]
-    paths:
-      - 'apps/api/**'
-      - 'packages/shared/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/api.yml'
   pull_request:
     paths:
       - 'apps/api/**'

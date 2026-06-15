@@ -3,12 +3,6 @@ name: Shared & Stellar Packages
 on:
   push:
     branches: [main]
-    paths:
-      - 'packages/shared/**'
-      - 'packages/stellar/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/shared.yml'
   pull_request:
     paths:
       - 'packages/shared/**'

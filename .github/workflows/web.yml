@@ -3,12 +3,6 @@ name: Web
 on:
   push:
     branches: [main]
-    paths:
-      - 'apps/web/**'
-      - 'packages/shared/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/web.yml'
   pull_request:
     paths:
       - 'apps/web/**'
