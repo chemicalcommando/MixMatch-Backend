@@ -8,7 +8,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "eslint \"src/**/*.{ts,tsx}\" \"App.tsx\"",
+    "lint": "eslint --no-error-on-unmatched-pattern \"src/**/*.{ts,tsx}\" \"App.tsx\" \"__tests__/**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
     "test": "jest"
   },
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@testing-library/react-native": "^12.7.2",
+    "@types/jest": "^29.5.12",
     "@types/react": "~18.3.12",
     "eslint": "8.57.1",
     "eslint-config-expo": "^8.0.0",

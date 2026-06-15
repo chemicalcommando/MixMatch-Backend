@@ -10,7 +10,8 @@ import type { JwtPayload } from '../types/auth.types.js';
 const PASSWORD_SALT_ROUNDS = 10;
 
 function signToken(payload: JwtPayload): string {
-  return jwt.sign(payload, env.JWT_SECRET, { expiresIn: env.JWT_EXPIRES_IN });
+  const options: jwt.SignOptions = { expiresIn: env.JWT_EXPIRES_IN as jwt.SignOptions['expiresIn'] };
+  return jwt.sign(payload, env.JWT_SECRET, options);
 }
 
 export const authService = {
