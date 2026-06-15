@@ -3,14 +3,19 @@
   "private": true,
   "version": "0.1.0",
   "workspaces": [
-    "backend",
-    "mobile",
-    "web"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
-    "bootstrap": "npm install --workspaces",
-    "lint": "npm run lint -w backend && npm run lint -w mobile && npm run lint -w web",
-    "typecheck": "npm run typecheck -w backend && npm run typecheck -w mobile && npm run typecheck -w web",
-    "test": "npm run test -w backend"
+    "bootstrap": "npm install",
+    "lint": "npm run lint -ws --if-present",
+    "typecheck": "npm run typecheck -ws --if-present",
+    "test": "npm run test -ws --if-present",
+    "build": "npm run build -ws --if-present",
+    "format": "prettier --check .",
+    "format:write": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
   }
 }
