@@ -23,9 +23,9 @@ export const CUISINE_TAGS = [
   'turkish',
   'vegan-friendly',
   'vietnamese',
-];
+] as const;
 
-export type CuisineTag = string;
+export type CuisineTag = (typeof CUISINE_TAGS)[number];
 
 export const DIETARY_TAGS = [
   'vegetarian',
@@ -36,6 +36,6 @@ export const DIETARY_TAGS = [
   'dairy-free',
   'nut-free',
   'low-carb',
-];
+] as const;
 
-export type DietaryTag = string;
+export type DietaryTag = (typeof DIETARY_TAGS)[number];

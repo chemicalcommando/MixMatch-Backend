@@ -32,6 +32,7 @@ export function TagMultiSelect({ options, selected, onChange, max, label }: TagM
               type="button"
               onClick={() => toggle(tag)}
               disabled={isDisabled}
+              aria-pressed={isSelected}
               style={{ opacity: isDisabled ? 0.4 : 1, cursor: isDisabled ? 'not-allowed' : 'pointer' }}
             >
               {tag}
